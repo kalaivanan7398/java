@@ -1,0 +1,21 @@
+package amazon;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class amazonscroll {
+	public static void main(String[] args) {
+		ChromeOptions op = new ChromeOptions();
+		WebDriver driver = new ChromeDriver(op);
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("mobile");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		Actions act = new  Actions(driver);
+		driver.findElement(By.xpath("a-size-medium a-color-base a-text-normal"));
+		driver.findElement(By.xpath("//*[@id=\"buy-now-button\"]"));
+
+	}
+}
